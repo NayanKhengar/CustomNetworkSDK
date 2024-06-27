@@ -54,6 +54,10 @@ publishing {
     repositories {
         maven {
             url = uri("https://jitpack.io")
+            credentials {
+                username = project.findProperty("gpr.user") as String
+                password = project.findProperty("gpr.key") as String
+            }
         }
     }
 }
