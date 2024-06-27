@@ -55,7 +55,7 @@ publishing {
         maven {
             credentials {
                 username 'NayanKhengar'
-                password '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'
+                password 'Nenskoff@123'
             }
             url = uri("https://jitpack.io")
         }
