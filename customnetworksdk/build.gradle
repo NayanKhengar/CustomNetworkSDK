@@ -22,8 +22,12 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    // Set Kotlin compile options
+    kotlinOptions {
+        jvmTarget = "1.8"
     }
 }
 
@@ -46,10 +50,12 @@ publishing {
             from components.findByName('release')
             groupId = 'com.github.NayanKhengar'
             artifactId = 'CustomNetworkSDK'
-            version = '1.0.0'
+            version = '1.0.2'
         }
     }
-
+    repositories {
+        mavenLocal() // Publish to local Maven repository
+    }
     repositories {
         maven {
             url = uri("https://jitpack.io")
