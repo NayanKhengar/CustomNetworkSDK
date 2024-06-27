@@ -55,8 +55,8 @@ publishing {
         maven {
             url = uri("https://jitpack.io")
             credentials {
-                username = project.findProperty("gpr.user") as String
-                password = project.findProperty("gpr.key") as String
+                username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_USERNAME")
+                password = project.findProperty("gpr.token") ?: System.getenv("GITHUB_TOKEN")
             }
         }
     }
