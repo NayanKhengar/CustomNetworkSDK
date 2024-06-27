@@ -50,7 +50,7 @@ publishing {
             from components.findByName('release')
             groupId = 'com.github.NayanKhengar'
             artifactId = 'CustomNetworkSDK'
-            version = '1.0.2'
+            version = '1.0.3'
         }
     }
     repositories {
