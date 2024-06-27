@@ -55,7 +55,7 @@ publishing {
             url = uri("https://jitpack.io")
             credentials {
                 username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_USERNAME")
-                password = project.findProperty("gpr.token") ?: System.getenv("GITHUB_TOKEN")
+                password = System.getenv("GITHUB_TOKEN")
             }
         }
     }
